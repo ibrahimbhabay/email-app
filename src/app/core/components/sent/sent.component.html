@@ -1,0 +1,10 @@
+<h1 class="title">{{title}}</h1>
+<mat-card class="container-card" *ngFor="let sentEmail of sentEmails$ | async " [class.mat-elevation-z2]="true" >
+    <mat-card-title>{{sentEmail?.Subject}}</mat-card-title>
+    <mat-card-subtitle>Sender: {{sentEmail?.To}}</mat-card-subtitle>
+    <mat-card-subtitle>Reciever: {{sentEmail?.From}}</mat-card-subtitle>
+    <mat-divider inset></mat-divider>
+    <mat-card-content>
+        <p> {{sentEmail?.TextBody}} </p>
+    </mat-card-content>
+</mat-card>

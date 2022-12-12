@@ -1,6 +1,11 @@
 # EmailApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+## Run the application locally
+- Have latest stable version of node installed
+- Install Angular CLI -> npm install @angular/cli@14.2.10
+- Install all dependencies -> npm install
+- Run the App => ng serve --configuration development
+
 
 ## Development server
 
