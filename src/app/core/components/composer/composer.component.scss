@@ -1,0 +1,62 @@
+$medium-text-size: 18px;
+$small-text-size: 12px;
+$border-colour-default: 1px solid #0b0000;
+$color-invalid: red;
+$border-color-invalid: 2px $color-invalid solid;
+$height-textarea-default: 60px;
+$line-height-textarea-default: 20px;
+
+.parent-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 30px 0;
+    min-width: 1.5em;
+}
+
+.form-control{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-control-body{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: $border-colour-default;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    resize: both;
+    min-height: $height-textarea-default;
+    line-height: $line-height-textarea-default;
+}
+
+label{
+    font-size: $medium-text-size;
+}
+
+.sent-button{
+    width: 100%;
+}
+
+.invalid{
+    font-size: $small-text-size;
+    outline: $border-color-invalid;
+}
+
+.invalid-text{
+    color: $color-invalid;
+}

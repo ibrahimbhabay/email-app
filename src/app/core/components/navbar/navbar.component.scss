@@ -1,0 +1,13 @@
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+a{
+    padding: 0 40px 0 40px;
+
+}
+.active{
+    background: palevioletred;
+    border-radius: 5px;
+}

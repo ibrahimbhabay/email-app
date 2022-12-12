@@ -1,0 +1,33 @@
+<div class="parent-container">  
+<form [formGroup]="emailComposeForm">
+        <div class="form-item">
+            <label>From:</label>
+            <input  class="form-control" type="email" placeholder="Send email from.." [class.invalid]="emailComposeForm.get('From').invalid && emailComposeForm.get('From').touched" formControlName="From">
+        <div *ngIf="(emailComposeForm.get('From').invalid && emailComposeForm.get('From').touched) || emailComposeForm.get('From').dirty">
+          <small class="invalid-text" *ngIf="emailComposeForm.get('From').errors?.['required']">Email address is required</small>
+          <small class="invalid-text" *ngIf="emailComposeForm.get('From').errors?.['email']">Email address is invalid</small>
+        </div>
+        </div>
+
+        <div class="form-item">
+            <label>To:</label>
+            <input  class="form-control"  type="email" placeholder="Send email to.." [class.invalid]="emailComposeForm.get('To').invalid && emailComposeForm.get('To').touched" formControlName="To">
+        <div *ngIf="(emailComposeForm.get('To').invalid && emailComposeForm.get('To').touched) || emailComposeForm.get('To').dirty">
+          <small class="invalid-text" *ngIf="emailComposeForm.get('To').errors?.['required']">Email address is required</small>
+          <small class="invalid-text" *ngIf="emailComposeForm.get('To').errors?.['minlength']?.['actualLength'] < emailComposeForm.get('To').errors?.['minlength']?.['requiredLength']">At least 4 characters</small>
+        </div>
+        </div>
+
+        <div class="form-item">
+            <label>Subject:</label>
+            <input  class="form-control" type="text" placeholder="Subject"  [class.invalid]="emailComposeForm.get('Subject').invalid && emailComposeForm.get('Subject').touched" formControlName="Subject">
+        </div>
+
+        <div class="form-item">
+            <label>Body:</label>
+            <textarea class="form-control-body" type="text" placeholder="Type your message ..."  [class.invalid]="emailComposeForm.get('TextBody').invalid && emailComposeForm.get('TextBody').touched" formControlName="TextBody"></textarea>
+        </div>
+
+        <button class="sent-button" mat-raised-button color="primary" [disabled]="!emailComposeForm.valid" (click)="sendEmail()">Sent</button>
+    </form>
+</div>
