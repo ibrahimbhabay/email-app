@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  emailPostmarkApi: "https://email-postmark.herokuapp.com/api/emails"
 };
