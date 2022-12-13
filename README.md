@@ -1,10 +1,16 @@
 # EmailApp
 
+## Run the application using cloud hosted api (Webhook is functional)
+- Have latest stable version of node installed
+- Install Angular CLI (help you debug if you want)-> npm install @angular/cli@14.2.10 
+- Install all dependencies -> npm install
+- Run the App with cloud hosted email api setup => ng serve --configuration production
+
 ## Run the application locally
 - Have latest stable version of node installed
 - Install Angular CLI -> npm install @angular/cli@14.2.10
 - Install all dependencies -> npm install
-- Run the App => ng serve --configuration development
+- Run the App with local setup => ng serve --configuration development
 
 
 ## Development server
